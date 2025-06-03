@@ -15,4 +15,6 @@ const app = express();
 
 import bookRouter from "./routes/book.routes.js";
 
+app.use(express.json());
+
 app.use("/books", bookRouter);

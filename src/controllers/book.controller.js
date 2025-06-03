@@ -1,4 +1,4 @@
-import { Book } from "./book.controller.js";
+import {Book} from "../models/book.model.js";
 
 const getAllBooks = async (req, res) => {
   try {
@@ -29,8 +29,10 @@ const getBookById = async (req, res) => {
 
 const createBook = async (req, res) => {
   try {
-    const { type, author } = req.body;
-    if (!type || !author) {
+    const { title, author } = req.body;
+
+    
+    if (!title || !author) {
       throw new Error("all fields are required");
     }
 
