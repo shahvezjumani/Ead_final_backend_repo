@@ -12,3 +12,5 @@ router.get("/", getAllBooks);
 router.get("/:id", getBookById);
 router.post("/", createBook);
 router.delete("/:id", deleteBook);
+
+export default router;
